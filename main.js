@@ -44,16 +44,16 @@ class MyBlockchain {
         this.chain.push(newBlock);
     }
 
-    isChainValid(){
-        for (let i = 1; i < this.chain.length; i++){
+    isChainValid() {
+        for (let i = 1; i < this.chain.length; i++) {
             const currentBlock = this.chain[i];
             const previousBlock = this.chain[i - 1];
 
-            if (currentBlock.hash !== currentBlock.calculateHash()){
+            if (currentBlock.hash !== currentBlock.calculateHash()) {
                 return false;
             }
 
-            if (currentBlock.previousHash !== previousBlock.hash){
+            if (currentBlock.previousHash !== previousBlock.hash) {
                 return false;
             }
         }
@@ -65,6 +65,6 @@ let alphaCoin = new MyBlockchain();
 alphaCoin.addBlock(new MyBlock(1, "01/10/2000", {amount: 2}));
 alphaCoin.addBlock(new MyBlock(2, "02/10/2000", {amount: 3}));
 
-console.log('blockchain valid ? '+ alphaCoin.isChainValid());
+console.log('blockchain valid ? ' + alphaCoin.isChainValid());
 
-// console.log(JSON.stringify(alphaCoin, null, 2));
+console.log(JSON.stringify(alphaCoin, null, 2));
