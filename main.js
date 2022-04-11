@@ -31,7 +31,7 @@ class MyBlockchain {
     }
 
     createGenesisBlock() {
-        return new MyBlock(0, "01/10/2000", "Genesis block", "0");
+        return new MyBlock(0, "01/01/2022", "Genesis block", "0");
     }
 
     getLatestBlock() {
@@ -62,9 +62,13 @@ class MyBlockchain {
 }
 
 let alphaCoin = new MyBlockchain();
-alphaCoin.addBlock(new MyBlock(1, "01/10/2000", {amount: 2}));
-alphaCoin.addBlock(new MyBlock(2, "02/10/2000", {amount: 3}));
 
-console.log('blockchain valid ? ' + alphaCoin.isChainValid());
+alphaCoin.addBlock(new MyBlock(1, "01/01/2022", {amount: 23}));
+alphaCoin.addBlock(new MyBlock(2, "02/01/2022", {amount: 17}));
+alphaCoin.addBlock(new MyBlock(3, "03/01/2022", {amount: 10}));
+alphaCoin.addBlock(new MyBlock(4, "04/01/2022", {amount: 1}));
+alphaCoin.addBlock(new MyBlock(5, "05/01/2022", {amount: 26}));
+
+console.log('blockchain valid ? : ' + alphaCoin.isChainValid());
 
 console.log(JSON.stringify(alphaCoin, null, 2));
