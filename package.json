@@ -1,0 +1,23 @@
+{
+  "name": "blockchain",
+  "version": "0.0.1",
+  "description": "my blockchain project. using js",
+  "main": "main.js",
+  "scripts": {
+    "start": "main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mindula-Dilthushan/blockchain.git"
+  },
+  "author": "Mindula Dilthushan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mindula-Dilthushan/blockchain/issues"
+  },
+  "homepage": "https://github.com/Mindula-Dilthushan/blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
